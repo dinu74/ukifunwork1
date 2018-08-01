@@ -1,0 +1,59 @@
+<html>
+<head>
+<script src="jquery-3.3.1.js"></script>
+<script src="jquery-3.3.1.min.js"></script>
+<script src="jquery-3.3.1.min.map"></script>
+
+  <script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("p").hide();
+    });
+});
+(document).ready(function(){
+    $("#show").click(function(){
+        $("p").show();
+    });
+});
+(document).ready(function(){
+    $("#toggle").click(function(){
+        $("p").toggle();
+    });
+});
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideDown("slow");
+    });
+});
+</script>
+<style>
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+</style>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+<p>
+  <div id="flip">Click to slide down panel</div>
+  <div id="panel">Hello world!</div>
+
+<img src="/home/ukistu07/Desktop/jquery/images.jpeg">
+<img src="/home/ukistu07/Desktop/jquery/cute.jpeg"><br></p>
+
+<button id="hide"> hide</button>
+<button id="show"> show</button>
+<button id="toggle"> toggle</button>
+
+
+</body>
+</html>
