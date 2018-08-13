@@ -1,181 +1,128 @@
-(function($) {
+SC.initialize({
+  client_id: '340f063c670272fac27cfa67bffcafc4'
+});
 
-	'use strict';
+$(document).ready(function() {
+  SC.stream('/tracks/244184510',function(sound){
+  $('#start').click(function(e) {
+           e.preventDefault();
+           sound.start();
+         });
+         $('#stop').click(function(e) {
+           e.preventDefault();
+           sound.stop();
+         });
 
-	// bootstrap dropdown hover
+ });
+ });
+ $(document).ready(function() {
+   SC.stream('/tracks/327267562',function(sound){
+   $('#a').click(function(e) {
+            e.preventDefault();
+            sound.start();
+          });
+          $('#b').click(function(e) {
+            e.preventDefault();
+            sound.stop();
+          });
 
-  // loader
-  var loader = function() {
-    setTimeout(function() { 
-      if($('#loader').length > 0) {
-        $('#loader').removeClass('show');
-      }
-    }, 1);
-  };
-  loader();
+  });
+  });
 
-  // Stellar
-  $(window).stellar();
+  $(document).ready(function() {
+    SC.stream('/tracks/115952864',function(sound){
+    $('#lady').click(function(e) {
+             e.preventDefault();
+             sound.start();
+           });
+           $('#kash').click(function(e) {
+             e.preventDefault();
+             sound.stop();
+           });
 
-	
-	$('nav .dropdown').hover(function(){
-		var $this = $(this);
-		$this.addClass('show');
-		$this.find('> a').attr('aria-expanded', true);
-		$this.find('.dropdown-menu').addClass('show');
-	}, function(){
-		var $this = $(this);
-			$this.removeClass('show');
-			$this.find('> a').attr('aria-expanded', false);
-			$this.find('.dropdown-menu').removeClass('show');
-	});
-
-
-	$('#dropdown04').on('show.bs.dropdown', function () {
-	  console.log('show');
-	});
-
-
-
-	// home slider
-	$('.home-slider').owlCarousel({
-    loop:true,
-    autoplay: true,
-    margin:10,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
-    nav:true,
-    autoplayHoverPause: true,
-    items: 1,
-    navText : ["<span class='ion-chevron-left'></span>","<span class='ion-chevron-right'></span>"],
-    responsive:{
-      0:{
-        items:1,
-        nav:false
-      },
-      600:{
-        items:1,
-        nav:false
-      },
-      1000:{
-        items:1,
-        nav:true
-      }
-    }
-	});
-
-	// owl carousel
-	var majorCarousel = $('.js-carousel-1');
-	majorCarousel.owlCarousel({
-    loop:true,
-    autoplay: false,
-    stagePadding: 0,
-    margin: 10,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
-    nav: false,
-    dots: false,
-    autoplayHoverPause: false,
-    items: 3,
-    responsive:{
-      0:{
-        items:1,
-        nav:false
-      },
-      600:{
-        items:2,
-        nav:false
-      },
-      1000:{
-        items:3,
-        nav:true,
-        loop:false
-      }
-  	}
-	});
-
-  // cusotm owl navigation events
-  $('.custom-next').click(function(event){
-    event.preventDefault();
-    // majorCarousel.trigger('owl.next');
-    majorCarousel.trigger('next.owl.carousel');
-
-  })
-  $('.custom-prev').click(function(event){
-    event.preventDefault();
-    // majorCarousel.trigger('owl.prev');
-    majorCarousel.trigger('prev.owl.carousel');
-  })
-
-	// owl carousel
-	var major2Carousel = $('.js-carousel-2');
-	major2Carousel.owlCarousel({
-    loop:true,
-    autoplay: true,
-    stagePadding: 7,
-    margin: 20,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
-    nav: false,
-    autoplayHoverPause: true,
-    items: 4,
-    navText : ["<span class='ion-chevron-left'></span>","<span class='ion-chevron-right'></span>"],
-    responsive:{
-      0:{
-        items:1,
-        nav:false
-      },
-      600:{
-        items:3,
-        nav:false
-      },
-      1000:{
-        items:4,
-        nav:true,
-        loop:false
-      }
-  	}
-	});
-
-
- 
-
-	var contentWayPoint = function() {
-		var i = 0;
-		$('.element-animate').waypoint( function( direction ) {
-
-			if( direction === 'down' && !$(this.element).hasClass('element-animated') ) {
-				
-				i++;
-
-				$(this.element).addClass('item-animate');
-				setTimeout(function(){
-
-					$('body .element-animate.item-animate').each(function(k){
-						var el = $(this);
-						setTimeout( function () {
-							var effect = el.data('animate-effect');
-							if ( effect === 'fadeIn') {
-								el.addClass('fadeIn element-animated');
-							} else if ( effect === 'fadeInLeft') {
-								el.addClass('fadeInLeft element-animated');
-							} else if ( effect === 'fadeInRight') {
-								el.addClass('fadeInRight element-animated');
-							} else {
-								el.addClass('fadeInUp element-animated');
-							}
-							el.removeClass('item-animate');
-						},  k * 100);
-					});
-					
-				}, 100);
-				
-			}
-
-		} , { offset: '95%' } );
-	};
-	contentWayPoint();
+   });
+   });
 
 
 
-})(jQuery);
+
+   $(document).ready(function() {
+     SC.stream('/tracks/57521426',function(sound){
+     $('#mulu').click(function(e) {
+              e.preventDefault();
+              sound.start();
+            });
+            $('#mathy').click(function(e) {
+              e.preventDefault();
+              sound.stop();
+            });
+
+    });
+    });
+
+
+    $(document).ready(function() {
+      SC.stream('/tracks/314823970',function(sound){
+      $('#ba').click(function(e) {
+               e.preventDefault();
+               sound.start();
+             });
+             $('#hu').click(function(e) {
+               e.preventDefault();
+               sound.stop();
+             });
+
+     });
+     });
+
+
+
+
+     $(document).ready(function() {
+       SC.stream('/tracks/348319082',function(sound){
+       $('#mer').click(function(e) {
+                e.preventDefault();
+                sound.start();
+              });
+              $('#sal').click(function(e) {
+                e.preventDefault();
+                sound.stop();
+              });
+
+      });
+      });
+
+
+
+
+      $(document).ready(function() {
+        SC.stream('/tracks/267806421',function(sound){
+        $('#pona').click(function(e) {
+                 e.preventDefault();
+                 sound.start();
+               });
+               $('#usiru').click(function(e) {
+                 e.preventDefault();
+                 sound.stop();
+               });
+
+       });
+       });
+
+
+
+
+
+       $(document).ready(function() {
+         SC.stream('/tracks/225519099',function(sound){
+         $('#nanum').click(function(e) {
+                  e.preventDefault();
+                  sound.start();
+                });
+                $('#rowdy').click(function(e) {
+                  e.preventDefault();
+                  sound.stop();
+                });
+
+        });
+        });
